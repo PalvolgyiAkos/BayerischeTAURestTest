@@ -22,15 +22,19 @@ public class TauTestToImplement1 {
 
         Assert.assertEquals(exampleResponseBean.getType(), EXPECTED_TYPE,
                 "Example response Type was not equal to expected one. Expected: " + EXPECTED_TYPE + "returned: " + exampleResponseBean.getType());
+        
         Assert.assertEquals(exampleResponseBean.getAttributes().getTitle(), EXPECTED_TITLE,
                 "Example response Title was not equal to expected one. Expected: " + EXPECTED_TITLE +
                         "returned: " + exampleResponseBean.getAttributes().getTitle());
+        
         Assert.assertEquals(exampleResponseBean.getAttributes().getBody(), EXPECTED_BODY,
                 "Example response Body was not equal to expected one. Expected: " + EXPECTED_BODY +
                         "returned" + exampleResponseBean.getAttributes().getBody());
+        
         Assert.assertTrue(exampleResponseBean.getAttributes().getReaderCount() > EXPECTED_MINIMUM_READERCOUNT,
-                "Example response ReaderCount was not smaller to expected one. Expected: " + EXPECTED_MINIMUM_READERCOUNT +
+                "Example response ReaderCount was not bigger to expected one. Expected: " + EXPECTED_MINIMUM_READERCOUNT +
                         "returned: " + exampleResponseBean.getAttributes().getReaderCount());
+        
         Assert.assertTrue(exampleResponseBean.getAttributes().getReaderCount() < EXPECTED_MAXIMUM_READERCOUNT,
                 "Example response ReaderCount was not smaller to expected one. Expected: " + EXPECTED_MAXIMUM_READERCOUNT +
                         "returned: " + exampleResponseBean.getAttributes().getReaderCount());
